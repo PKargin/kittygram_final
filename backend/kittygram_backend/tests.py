@@ -1,10 +1,10 @@
 from http import HTTPStatus
 
-from api import models
+from cats import models
 from django.test import Client, TestCase
 
 
-class TaskiAPITestCase(TestCase):
+class KittygramAPITestCase(TestCase):
     """
     Тесты  доступности списка
     объектов и отдельного объекта
