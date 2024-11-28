@@ -1,11 +1,15 @@
 from http import HTTPStatus
 
 from api import models
-
 from django.test import Client, TestCase
 
 
 class TaskiAPITestCase(TestCase):
+    """
+    Тесты  доступности списка 
+    объектов и отдельного объекта
+    """
+    
     def setUp(self):
         self.guest_client = Client()
 
