@@ -11,7 +11,7 @@ load_dotenv(env_path)
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-DEBUG = os.environ('DJANGO_DEBUG', '') != False
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kittygram-nophp.zapto.org']
 
