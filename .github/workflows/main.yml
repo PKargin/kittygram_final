@@ -161,7 +161,7 @@ jobs:
         host: ${{ secrets.KITTY_HOST }}
         username: ${{ secrets.KITTY_USER }}
         key: ${{ secrets.KITTY_SSH_KEY }}
-        passphrase: ${{ secrets.KITTY_SSH_PASSPHARASE }}
+        passphrase: ${{ secrets.KITTY_SSH_PASSPHRASE }}
         source: "docker-compose.production.yml"
         target: "kittygram_final"
     - name: Executing remote ssh commands to deploy
@@ -170,7 +170,7 @@ jobs:
         host: ${{ secrets.KITTY_HOST }}
         username: ${{ secrets.KITTY_USER }}
         key: ${{ secrets.KITTY_SSH_KEY }}
-        passphrase: ${{ secrets.KITTY_SSH_PASSPHARASE }}
+        passphrase: ${{ secrets.KITTY_SSH_PASSPHRASE }}
         # Параметр script передаёт в action appleboy/ssh-action команды,
         # которые нужно выполнить на сервере, 
         # с которым установлено соединение
