@@ -6,12 +6,11 @@ from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-env_path = load_dotenv(os.path.join(BASE_DIR, '.env'))
-load_dotenv(env_path)
+load_dotenv()
 
-SECRET_KEY = os.getenv('SECRET_KEY', '')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DJANGO_DEBUG', '') != False
+DEBUG = os.getenv('DJANGO_DEBUG') != False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kittygram-nophp.zapto.org']
 
