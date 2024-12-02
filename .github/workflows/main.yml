@@ -163,7 +163,7 @@ jobs:
         key: ${{ secrets.KITTY_SSH_KEY }}
         passphrase: ${{ secrets.KITTY_SSH_PASSPHARASE }}
         source: "docker-compose.production.yml"
-        target: "kittygram"
+        target: "kittygram_final"
     - name: Executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
