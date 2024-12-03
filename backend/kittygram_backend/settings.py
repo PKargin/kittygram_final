@@ -2,17 +2,15 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
+from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv()
+SECRET_KEY = config('SECRET_KEY')
 
-SECRET_KEY = str(os.getenv('SECRET_KEY'))
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-DEBUG = str(os.getenv('DJANGO_DEBUG')) != False
-
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'kittygram-nophp.zapto.org']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
